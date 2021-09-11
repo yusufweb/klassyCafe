@@ -1,0 +1,65 @@
+.footer {
+    padding: 5em 1em;
+    width: 100%;
+    background-color: $primary;
+    text-align: center;
+
+    p {
+        color: $dark;
+        font-size: 0.8rem;
+    }
+
+    @include sm {
+        padding: 4em;
+    }
+    
+    @include md {
+        padding: 4em 7em;
+    }
+    
+
+    &__container {
+        width: 100%;
+
+        @include md {
+            display: flex;
+            @include flex(space-between, center);
+        }
+
+
+        img {
+            margin: 0 auto;
+            margin-bottom: 2em;
+        }
+
+        &--item {
+            p {
+                color: $light;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .footer__icon {
+        display: flex;
+        @include flex(center);
+        margin-bottom: 2em;
+
+        &--list {
+            margin: 0 0.6em;
+        }
+
+        &--link {
+            background-color: $light;
+            color: $primary;
+            font-size: 0.9rem;
+            padding: 0.6em;
+            border-radius: 100%;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background-color: $secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+%input {
+    width: 100%;
+    border-radius: 5px;
+    margin: 1em 0;
+    border: 1px solid $light_grey;
+    outline: none;
+}
+
+.contact {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url(/images/slide-02.jpg);
+    background-repeat: no-repeat;
+    padding: 5em 1em;
+
+    @include sm {
+        padding: 5em 4em;
+    }
+
+    @include md {
+        padding: 5em 7em;
+    }
+
+    .title div {
+        background-color: $light;
+    }
+
+    .title h4 {
+        color: $light;
+    }
+
+    .subtitle, .subtitle__text {
+        color: $light
+    }
+
+    &__container {
+        @include md {
+            display: flex;
+            @include flex;
+        } 
+        
+        &--item {
+            @include md {
+                width: 48%;
+            }
+        }
+
+        &--item:last-child {
+            background: $light;
+            padding: 2em;
+            border-radius: 5px;
+
+            h1 {
+                text-align: center;
+                color: $dark;
+                font-weight: 800;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .contact__info {
+        width: 100%; 
+        @include md {
+            display: flex;
+            @include flex;
+        } 
+        &--item {
+            width: 100%;
+            @include md {
+                width: 48%;
+            }
+            border-radius: 5px;
+            margin: 4em 0;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            background-color: $light;
+
+            h4 {
+                padding-top: 2em;
+                padding-bottom: 1em;
+                font-weight: bolder;
+                font-size: 1.5rem;
+                @include md {
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.9;
+                @include md {
+                    font-size: 0.7rem;
+                }
+            }
+    
+            .fa {
+                width: 75px;
+                background-color: $primary;
+                padding: 1.5em;
+                color: $light;
+                border-radius: 100%;
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                margin-left: -32.5px;
+                
+            }
+        }
+    }
+
+    .form {
+        width: 100%;
+        &__row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include flex;
+
+            &--col {
+                width: 100%;
+                @include sm {
+                    width: 48%;
+                }
+                
+                input, select {
+                    padding: 1.1em;
+                    @extend %input;
+                }
+            }
+
+            .message {
+                width: 100%!important;
+
+                textarea {
+                    @extend %input;
+                    height: 150px;
+                    padding: 1.1em;
+                    resize: none;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 1.4em;
+            background-color: $primary;
+            border: none;
+            outline: none;
+            text-transform: capitalize;
+            color: $light;
+            font-weight: 700;
+            transition: background 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    }
+}
+
